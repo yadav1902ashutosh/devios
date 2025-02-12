@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Display HTML Code as Text in a Webpage</title>
+</head>
+<body>
+    <h1>How to Display HTML Code as Text in a Webpage</h1>
+    <p>
+        When writing a blog or documentation about web development, you might want 
+        to display HTML code as plain text rather than letting the browser interpret it
+        as actual HTML. In this article, we'll explore different ways to achieve this.
+    </p>
+    <h2>Why Does HTML Render Instead of Displaying as Text?</h2>
+    <p>
+        Browsers are designed to interpret HTML tags and render them accordingly. For 
+        example, writing:
+        <pre>
+            <p>This is a paragraph.</p>
+        </pre>
+        Will result in the browser displaying:
+
+        This is a paragraph.
+
+        Instead of the actual HTML code.
+        To prevent this, we need to explicitly tell the browser to treat HTML as plain text.
+    </p>
+    <h2>Methods to Display HTML Code as Text</h2>
+    <h3>1. Using HTML Entities</h3>
+    <p>
+        One simple way to display HTML code is by replacing special characters with their 
+        HTML entity equivalents:
+        <ul>
+            <li><pre>< becomes &lt;</pre></li>
+            <li><pre>> becomes &gt;</pre></li>
+            <li><pre>& becomes &amp;</pre></li>
+        </ul>
+    </p>
+</body>
+</html>
