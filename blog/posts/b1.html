@@ -1,41 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Display HTML Code as Text in a Webpage</title>
+    <link rel="stylesheet" href="../styles/blog.css">
 </head>
+
 <body>
-    <h1>How to Display HTML Code as Text in a Webpage</h1>
-    <p>
-        When writing a blog or documentation about web development, you might want 
-        to display HTML code as plain text rather than letting the browser interpret it
-        as actual HTML. In this article, we'll explore different ways to achieve this.
-    </p>
-    <h2>Why Does HTML Render Instead of Displaying as Text?</h2>
-    <p>
-        Browsers are designed to interpret HTML tags and render them accordingly. For 
-        example, writing:
-        <pre>
+
+    <!-- Top Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon">☰</div>
+            <div class="logo">Devios</div>
+            <div class="search-icon">🔍</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-container">
+        <!-- Blog Post -->
+        <article class="blog-content">
+            <h1 class="blog-title">How to Display HTML Code as Text in a Webpage</h1>
+            <p class="blog-meta">Published on February 14, 2025 | By Devios</p>
+
+            <p>When writing a blog or documentation about web development, you might want to display HTML code as plain text rather than letting the browser interpret it. In this article, we'll explore different ways to achieve this.</p>
+
+            <h2>Why Does HTML Render Instead of Displaying as Text?</h2>
+            <p>Browsers are designed to interpret HTML tags and render them accordingly. For example, writing:</p>
+
+            <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+
+            <p>Will result in the browser displaying:</p>
+
             <p>This is a paragraph.</p>
-        </pre>
-        Will result in the browser displaying:
 
-        This is a paragraph.
+            <p>Instead of the actual HTML code. To prevent this, we need to explicitly tell the browser to treat HTML as plain text.</p>
 
-        Instead of the actual HTML code.
-        To prevent this, we need to explicitly tell the browser to treat HTML as plain text.
-    </p>
-    <h2>Methods to Display HTML Code as Text</h2>
-    <h3>1. Using HTML Entities</h3>
-    <p>
-        One simple way to display HTML code is by replacing special characters with their 
-        HTML entity equivalents:
-        <ul>
-            <li><pre>< becomes &lt;</pre></li>
-            <li><pre>> becomes &gt;</pre></li>
-            <li><pre>& becomes &amp;</pre></li>
-        </ul>
-    </p>
+            <h2>Methods to Display HTML Code as Text</h2>
+
+            <h3>1. Using HTML Entities</h3>
+            <p>One simple way to display HTML code is by replacing special characters with their HTML entity equivalents:</p>
+
+            <ul>
+                <li><code>&lt; becomes &amp;lt;</code></li>
+                <li><code>&gt; becomes &amp;gt;</code></li>
+                <li><code>&amp; becomes &amp;amp;</code></li>
+            </ul>
+
+            <p>For example, writing:</p>
+            <pre><code>&amp;lt;p&amp;gt;This is a paragraph.&amp;lt;/p&amp;gt;</code></pre>
+
+            <p>Will display:</p>
+            <pre><code><p>This is a paragraph.</p></code></pre>
+
+            <h3>2. Using the <code>&lt;pre&gt;</code> Tag</h3>
+            <p>For better readability, you can use the <code>&lt;pre&gt;</code> tag along with the <code>&lt;code&gt;</code> tag:</p>
+
+            <pre>
+                <code>
+&lt;pre&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/pre&gt;
+                </code>
+            </pre>
+
+            <p>This will preserve indentation and make the code block more readable.</p>
+
+            <h3>3. Using JavaScript to Escape HTML</h3>
+            <p>If you're dynamically inserting content, JavaScript can help escape HTML characters:</p>
+
+            <pre>
+                <code>
+function escapeHTML(html) {
+    return html.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+document.getElementById("output").innerHTML = escapeHTML("&lt;p&gt;This is a paragraph.&lt;/p&gt;");
+                </code>
+            </pre>
+
+            <h3>4. Using CSS to Prevent Interpretation</h3>
+            <p>You can also use CSS to prevent the browser from rendering HTML inside certain elements:</p>
+
+            <pre><code>
+pre, code {
+    white-space: pre;
+    font-family: monospace;
+}
+            </code></pre>
+
+            <h2>Conclusion</h2>
+            <p>Displaying HTML code as text is essential when writing tutorials or documentation about web development. By using the methods mentioned above, you can ensure that your code snippets are displayed correctly and are easy to read.</p>
+
+            <p>Using HTML entities is the simplest way, but combining <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> provides better readability. For dynamic content, JavaScript can be used to escape HTML automatically.</p>
+
+            <p>Now that you know how to display HTML as text, try implementing it in your own projects! 🚀</p>
+        </article>
+
+        <!-- Author Box -->
+        <section class="author-box">
+            <h3>About the Author</h3>
+            <p>Devios is a passionate web developer sharing insights and tutorials to help beginners master coding.</p>
+        </section>
+
+        <!-- Related Posts -->
+        <section class="related-posts">
+            <h2>Related Posts</h2>
+            <ul class="related-list">
+                <li><a href="b2.html">Understanding CSS Flexbox</a></li>
+                <li><a href="b3.html">JavaScript Basics: Functions</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Devios. All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
