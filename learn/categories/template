@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devios Learn - Mastering Markdown</title>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon">☰</div>
+            <div class="logo">Devios Learn</div>
+            <div class="search-icon">🔍</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../learn.html">Learn</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Left Navigation Menu -->
+        <aside class="left-nav">
+            <h3>Markdown Guide</h3>
+            <ul>
+                <li><a href="#what-is-markdown">What is Markdown?</a></li>
+                <li><a href="#why-use-markdown">Why Use Markdown?</a></li>
+                <li><a href="#steps-to-implement">Steps to Implement</a></li>
+            </ul>
+        </aside>
+        
+        <main class="blog-container">
+            <h1 class="blog-title">Mastering Markdown: How to Implement It in Your Blog</h1>
+            <p class="blog-meta">Published on February 14, 2025 by Devios</p>
+            
+            <section class="blog-content">
+                <h2 id="what-is-markdown">What is Markdown?</h2>
+                <p>Markdown is a lightweight markup language used to format text using simple syntax. It is commonly used for writing blog posts, documentation, and even README files on GitHub.</p>
+                
+                <h2 id="why-use-markdown">Why Use Markdown?</h2>
+                <ul>
+                    <li>Easy to write and read.</li>
+                    <li>Converts into clean HTML automatically.</li>
+                    <li>Lightweight and efficient for blogging.</li>
+                </ul>
+                
+                <h2 id="steps-to-implement">Steps to Implement Markdown in Your Blog</h2>
+                <ol>
+                    <li>Include the <code>marked.js</code> library:</li>
+                    <pre><code>&lt;script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"&gt;&lt;/script&gt;</code></pre>
+                    <li>Create a textarea for user input:</li>
+                    <pre><code>&lt;textarea id="markdown-input" placeholder="Write your Markdown here..."&gt;&lt;/textarea&gt;</code></pre>
+                    <li>Create a preview div:</li>
+                    <pre><code>&lt;div id="preview"&gt;&lt;/div&gt;</code></pre>
+                    <li>Use JavaScript to convert Markdown to HTML:</li>
+                    <pre><code>document.getElementById("markdown-input").addEventListener("input", function() {
+    document.getElementById("preview").innerHTML = marked.parse(this.value);
+});</code></pre>
+                </ol>
+            </section>
+            
+            <!-- Author Box -->
+            <section class="author-box">
+                <h3>About the Author</h3>
+                <p>Devios is a passionate web developer sharing insights and tutorials to help beginners master coding.</p>
+            </section>
+            
+            <!-- Related Posts -->
+            <section class="related-posts">
+                <h2>Related Posts</h2>
+                <ul class="related-list">
+                    <li><a href="b2.html">Understanding CSS Flexbox</a></li>
+                    <li><a href="b3.html">JavaScript Basics: Functions</a></li>
+                </ul>
+            </section>
+        </main>
+        
+        <!-- Right Ad Space -->
+        <aside class="right-ad">
+            <p>Advertisement</p>
+            <div class="ad-box">Ad Placeholder</div>
+        </aside>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Devios. All rights reserved.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="markdown.js"></script>
+</body>
+</html>

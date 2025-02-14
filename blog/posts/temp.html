@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devios Blog</title>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon">☰</div>
+            <div class="logo">Devios</div>
+            <div class="search-icon">🔍</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <!-- Left Sidebar Navigation -->
+        <aside class="left-nav">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">HTML</a></li>
+                <li><a href="#">CSS</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">Web Development</a></li>
+            </ul>
+        </aside>
+        
+        <!-- Main Blog Content -->
+        <main class="blog-container">
+            <h1 class="blog-title">Blog Post Title</h1>
+            <p class="blog-meta">Published on <span id="date"></span> by Devios</p>
+            
+            <section class="blog-content">
+                <p>Welcome to the Devios blog! This is a template for writing your blog posts. You can format your text using HTML and Markdown.</p>
+            </section>
+            
+            <!-- Author Box -->
+            <section class="author-box">
+                <h3>About the Author</h3>
+                <p>Devios is a passionate web developer sharing insights and tutorials to help beginners master coding.</p>
+            </section>
+            
+            <!-- Related Posts -->
+            <section class="related-posts">
+                <h2>Related Posts</h2>
+                <ul class="related-list">
+                    <li><a href="#">Understanding CSS Grid</a></li>
+                    <li><a href="#">JavaScript ES6 Features</a></li>
+                </ul>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Devios. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // Set the current date
+        document.getElementById("date").innerText = new Date().toDateString();
+    </script>
+</body>
+</html>

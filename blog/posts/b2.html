@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="../styles/blog.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header>
+        <div class="top-bar">
+            <div class="menu-icon">☰</div>
+            <div class="logo">Devios</div>
+            <div class="search-icon">🔍</div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="blog-container">
+        <h1 class="blog-title">Markdown Editor</h1>
+        <textarea id="markdown-input" placeholder="Write your Markdown here..."></textarea>
+        
+        <!-- Markdown content will be rendered here -->
+        <div id="preview" class="blog-content"></div>
+        
+        <button onclick="saveBlog()">Save Blog</button>
+                 <!-- Author Box -->
+                 <section class="author-box">
+                    <h3>About the Author</h3>
+                    <p>Devios is a passionate web developer sharing insights and tutorials to help beginners master coding.</p>
+                </section>
+        
+                <!-- Related Posts -->
+                <section class="related-posts">
+                    <h2>Related Posts</h2>
+                    <ul class="related-list">
+                        <li><a href="b2.html">Understanding CSS Flexbox</a></li>
+                        <li><a href="b3.html">JavaScript Basics: Functions</a></li>
+                    </ul>
+                </section>
+                <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+                <script src="../scripts/markdown.js"></script>
+            </main>
+
+             <!-- Footer -->
+             <footer>
+                <p>&copy; 2025 Devios. All rights reserved.</p>
+            </footer>
+</body>
+</html>
