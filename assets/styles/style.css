@@ -8,7 +8,7 @@
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     color: #333;
     padding: 0;
     margin: 0;
@@ -19,10 +19,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #444;
-    padding: 10px 20px;
+    background-color: #222;
+    padding: 15px 20px;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     position: relative;
 }
@@ -32,11 +32,11 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 1px;
 }
 
-/* Menu Icon */
+/* Menu & Search Icons */
 .menu-icon, .search-icon {
     font-size: 22px;
     cursor: pointer;
@@ -50,7 +50,7 @@ body {
 /* Navigation Bar */
 header nav {
     background-color: #333;
-    padding: 10px 20px;
+    padding: 12px 20px;
 }
 
 nav ul {
@@ -60,7 +60,7 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 18px;
 }
 
 nav ul li a {
@@ -79,26 +79,28 @@ nav ul li a:hover {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px;
+    border-radius: 0 0 20px 20px;
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+    font-size: 50px;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 25px;
+    opacity: 0.9;
 }
 
 .cta-button {
     background-color: #ffcc00;
     color: #333;
-    padding: 12px 25px;
+    padding: 14px 30px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -109,29 +111,30 @@ nav ul li a:hover {
 
 /* Featured Projects Section */
 .featured-projects {
-    padding: 40px 20px;
+    padding: 50px 20px;
     background-color: #fff;
     text-align: center;
 }
 
 .featured-projects h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+    font-size: 34px;
+    margin-bottom: 25px;
+    color: #222;
 }
 
 .project-cards {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .project-card {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 280px;
+    border-radius: 12px;
+    width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -143,7 +146,7 @@ nav ul li a:hover {
 
 .project-card h3 {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .project-card p {
@@ -155,9 +158,9 @@ nav ul li a:hover {
 footer {
     background-color: #222;
     color: white;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1.6;
 }
 
@@ -169,14 +172,14 @@ footer {
 }
 
 .footer-section {
-    max-width: 200px;
+    max-width: 220px;
     text-align: left;
 }
 
 .footer-section h3 {
     color: #ffcc00;
-    margin-bottom: 10px;
-    font-size: 16px;
+    margin-bottom: 12px;
+    font-size: 18px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -185,25 +188,18 @@ footer {
     list-style: none;
     padding: 0;
     display: block;
-    background: transparent !important;
-    box-shadow: none !important;
 }
 
 .footer-section ul li {
-    margin-bottom: 8px;
-    box-shadow: none !important;
-    background: transparent !important;
+    margin-bottom: 10px;
 }
 
 .footer-section ul li a,
 .footer-section a {
-    background: transparent !important;
-    box-shadow: none !important;
     color: #ccc;
     text-decoration: none;
     transition: color 0.3s;
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: 15px;
 }
 
 .footer-section ul li a:hover,
@@ -212,11 +208,11 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 14px;
     color: #888;
     border-top: 1px solid #444;
-    padding-top: 10px;
+    padding-top: 12px;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
