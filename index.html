@@ -1,75 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devios - Your hub for development, projects, and learning. Explore tutorials, articles, and a curated DSA sheet.">
-    <meta name="keywords" content="Devios, development, programming, coding, blog, DSA sheet, projects">
-    <meta name="author" content="Devios">
-    <meta property="og:title" content="Devios - Learn, Code, Build">
-    <meta property="og:description" content="Explore projects, tutorials, and resources for developers.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://devios.org">
-    <meta property="og:image" content="https://devios.org/preview.jpg">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <title>Devios - Learn, Code, Build</title>
-    <link rel="stylesheet" href="assets/styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Devios – For Readers, Geeks, and Curious Minds. Discover book and gadget reviews with honest takes and affiliate links to support us." />
+  <meta name="keywords" content="Devios, book reviews, gadget reviews, affiliate products, tech blog, reading blog" />
+  <meta name="author" content="Devios" />
+  <title>Devios – For Readers, Geeks, and Curious Minds</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <div class="top-bar">
-        <span class="menu-icon">☰</span>
-        <span class="logo">Devios</span>
-        <span class="search-icon">🔍</span>
-    </div>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog/index.html">Blog</a></li>
-                <li><a href="dsa-sheet/dsa-sheet.html">DSA Sheet</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section class="hero">
-        <h1>Welcome to Devios</h1>
-        <p>Your hub for development and learning.</p>
-        <button class="cta-button">Explore</button>
-    </section>
-    <section class="featured-projects">
-        <h2>Featured Projects</h2>
-        <div class="project-cards">
-            <div class="project-card">
-                <h3>Blog</h3>
-                <p>Explore articles, tutorials, and insights on programming and development.</p>
-            </div>
-            <div class="project-card">
-                <h3>DSA Sheet</h3>
-                <p>A curated list of essential DSA problems inspired by Striver's sheet.</p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About</h3>
-                <p>Devios is a platform for learning and sharing development knowledge.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Links</h3>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">DSA Sheet</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            &copy; 2025 Devios. All rights reserved. 
-    </footer>
-    <script src="dsa-script.js"></script>
+  <header>
+    <h1>Devios</h1>
+    <p class="tagline">For Readers, Geeks, and Curious Minds</p>
+    <nav>
+      <a href="books/index.html" >Books</a>
+      <a href="gadgets/index.html" >Gadgets</a>
+    </nav>
+  </header>
 
+  <main>
+    <section id="books">
+      <h2>📚 Latest Book Picks</h2>
+      <div class="post-list" id="book-list">
+        <!-- Book posts injected here by JS -->
+      </div>
+    </section>
+
+    <section id="gadgets">
+      <h2>🔌 Latest Gadget Picks</h2>
+      <div class="post-list" id="gadget-list">
+        <!-- Gadget posts injected here by JS -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Devios. Powered by curiosity.</p>
+  </footer>
 </body>
 </html>
