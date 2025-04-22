@@ -81,47 +81,48 @@ body {
 /* Video Scroll Container */
 .video-scroll-container {
     display: flex;
-    gap: 50px; /* Increased space between cards */
-    overflow-x: auto; /* Allow scrolling horizontally */
-    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Space between cards */
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
     scroll-snap-type: x mandatory;
-    justify-content: center; /* Center content within the scroll */
-    max-width: 100%; /* Limit container width */
-    margin: 0 auto; /* Center the container */
-    flex-wrap: nowrap; /* Prevent wrapping of items */
-    width: calc(100% - 100px); /* Allow space for the gap */
-    overflow-y: hidden; /* Hide vertical overflow */
+    scroll-behavior: smooth;
 }
 
 /* Video Card Styling */
 .video-card {
-    flex: 0 0 auto;
-    width: 320px; /* Limit width per card */
+    flex: 0 0 auto; /* Prevent shrinking/stretching */
+    width: 320px; /* Fixed width for each video card */
     background-color: #222;
     border-radius: 12px;
     padding: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-    scroll-snap-align: start;
     text-align: center;
     transition: transform 0.3s;
+    opacity: 0.9;
+    scroll-snap-align: start; /* Ensure each card snaps into place */
 }
 
-/* Hover effect for video cards */
+/* Hover Effect */
 .video-card:hover {
-    transform: scale(1.05); /* Optional zoom on hover for effect */
+    transform: scale(1.05); /* Optional zoom effect on hover */
 }
 
+/* Video Card iframe (YouTube embed) */
 .video-card iframe {
     border-radius: 8px;
     width: 100%;
     height: auto;
 }
 
-/* Video Card Title */
+/* Video Card Titles */
 .video-card h3 {
     margin-top: 10px;
     color: #fff;
-    text-align: center; /* Center align video titles */
+    text-align: center;
     white-space: normal; /* Allow wrapping of titles */
     word-wrap: break-word; /* Prevent breaking words */
     overflow-wrap: break-word; /* Ensures long words are broken correctly */
@@ -131,115 +132,40 @@ body {
 .video-card p {
     font-size: 0.9em;
     color: #ccc;
-    white-space: normal; /* Allow wrapping of text */
-    word-wrap: break-word; /* Prevent breaking words */
-    overflow-wrap: break-word; /* Ensures long words are broken correctly */
-    text-align: center; /* Center align text */
-}
-
-/* Latest Blog Posts Section */
-.latest-blog-posts {
-    padding: 50px 0;
-    background-color: #222;
     text-align: center;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.latest-blog-posts h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.blog-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Blog Card Styling */
-.blog-card {
-    background-color: #222;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-}
-
-/* Blog Card Title */
-.blog-card h3 {
-    font-size: 1.8em;
-    color: #0f9;
-    text-align: center; /* Center align blog titles */
-    white-space: normal; /* Allow wrapping of titles */
-    word-wrap: break-word; /* Prevent breaking words */
-    overflow-wrap: break-word; /* Ensures long words are broken correctly */
-}
-
-/* Blog Card Description */
-.blog-card p {
-    font-size: 1.1em;
-    color: #ccc;
-}
-
-/* Blog Card Links */
-.blog-card a {
-    color: #0f9;
-    text-decoration: none;
-}
-
-.blog-card a:hover {
-    text-decoration: underline;
-}
-
-/* Social Media Section */
-.social-media {
-    padding: 40px 0;
-    text-align: center;
-    background-color: #111;
-}
-
-.social-media h2 {
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-/* Social Media Icons */
-.social-icon {
-    padding: 15px 30px;
-    background-color: #444;
-    color: #fff;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: background-color 0.3s;
-}
-
-/* Hover effect for social icons */
-.social-icon:hover {
+/* Show More Button */
+.show-more-btn {
     background-color: #0f9;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
 }
 
-.social-icon.youtube {
-    background-color: #ff0000;
+.show-more-btn:hover {
+    background-color: #0c7e74;
 }
 
-.social-icon.twitter {
-    background-color: #1da1f2;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .video-scroll-container {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.social-icon.instagram {
-    background-color: #e4405f;
+    .video-card {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px; /* Space between videos */
+    }
 }
 
 /* Footer */
@@ -251,23 +177,4 @@ footer {
 
 footer p {
     color: #fff;
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    .video-scroll-container {
-        gap: 20px; /* Reduced space between cards */
-        padding: 10px 0;
-        width: 100%; /* Make container full-width */
-    }
-    .video-card {
-        width: 100%; /* Make video cards full-width on mobile */
-        margin-bottom: 20px; /* Space between stacked cards */
-    }
-    .hero h1 {
-        font-size: 2em; /* Smaller font size on mobile */
-    }
-    .hero p {
-        font-size: 1.2em; /* Smaller font size on mobile */
-    }
 }
