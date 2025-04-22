@@ -82,7 +82,7 @@ body {
 .video-scroll-container {
     display: flex;
     gap: 50px; /* Increased space between cards */
-    overflow-x: hidden; /* Hide overflowed content */
+    overflow-x: auto; /* Allow scrolling horizontally */
     padding: 20px 0;
     scroll-snap-type: x mandatory;
     justify-content: center; /* Center content within the scroll */
@@ -90,6 +90,7 @@ body {
     margin: 0 auto; /* Center the container */
     flex-wrap: nowrap; /* Prevent wrapping of items */
     width: calc(100% - 100px); /* Allow space for the gap */
+    overflow-y: hidden; /* Hide vertical overflow */
 }
 
 /* Video Card Styling */
@@ -250,4 +251,23 @@ footer {
 
 footer p {
     color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .video-scroll-container {
+        gap: 20px; /* Reduced space between cards */
+        padding: 10px 0;
+        width: 100%; /* Make container full-width */
+    }
+    .video-card {
+        width: 100%; /* Make video cards full-width on mobile */
+        margin-bottom: 20px; /* Space between stacked cards */
+    }
+    .hero h1 {
+        font-size: 2em; /* Smaller font size on mobile */
+    }
+    .hero p {
+        font-size: 1.2em; /* Smaller font size on mobile */
+    }
 }
