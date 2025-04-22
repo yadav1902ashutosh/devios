@@ -7,46 +7,42 @@ body {
     color: #fff;
 }
 
-/* Topbar (Branding) */
-.topbar {
-    background-color: #111; /* Dark background for topbar */
-    padding: 10px 0;
+/* Header */
+header {
+    background-color: #000; /* Black background for site name */
+    padding: 0;
     text-align: center;
+    position: relative;
+    z-index: 2; /* Ensures the header stays on top of other elements */
+}
+h1{
+    padding: 15px;
+    margin: 0%;}
+header nav {
+    background-color: #444; /* Grey background for navbar */
+    padding: 10px 0;       
+    display: flex;
+    flex-wrap: wrap; /* Allows navbar items to wrap on smaller screens */
+    position: relative; /* Ensures the navbar is positioned relative to the header */
+    justify-content: center;       
+
 }
 
-.topbar .logo h1 {
-    font-size: 2.5em;
-    color: #0f9; /* Bright color for branding */
-    margin: 0;
-    font-weight: bold;
-}
-
-/* Navbar (Navigation Bar) */
-.navbar {
-    background-color: #222; /* Darker background for navbar */
-    padding: 15px 0;
-    text-align: center;
-}
-
-.navbar nav ul {
+header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.navbar nav ul li {
+header nav ul li {
     display: inline;
     margin: 0 15px;
 }
 
-.navbar nav ul li a {
+header nav ul li a {
     text-decoration: none;
-    color: #fff;
+    color: #fff; /* White text for navbar links */
     font-size: 1.2em;
-}
-
-.navbar nav ul li a:hover {
-    color: #0f9; /* Highlight links on hover */
 }
 
 /* Hero Section */
@@ -59,10 +55,16 @@ body {
 .hero h1 {
     font-size: 3em;
     margin-bottom: 10px;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+    line-height: 1.4; /* Adds some spacing between lines */
 }
 
 .hero p {
     font-size: 1.5em;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+    line-height: 1.4; /* Adds some spacing between lines */
 }
 
 /* YouTube Showcase Section */
@@ -76,96 +78,178 @@ body {
     font-size: 2.5em;
     margin-bottom: 20px;
     color: #fff;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
 }
 
-/* Video Scroll Container */
 .video-scroll-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px; /* Space between cards */
+    display: flex; /* Ensures cards are laid out horizontally */
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: center; /* Aligns cards vertically */
+    overflow-x: auto;
     padding: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-    overflow-x: hidden; /* Hide the horizontal scrollbar */
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    gap: 20px; /* Adds space between video cards */
+    flex-wrap: nowrap;
 }
 
-/* Video Card Styling */
 .video-card {
-    flex: 0 0 auto; /* Prevent shrinking/stretching */
-    width: 320px; /* Fixed width for each video card */
     background-color: #222;
-    border-radius: 12px;
     padding: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 320px; /* Ensures each card has the same width */
+    height: 480px; /* Sets a fixed height for all cards */
+    scroll-snap-align: start;
     text-align: center;
-    transition: transform 0.3s;
-    opacity: 0.9;
-    scroll-snap-align: start; /* Ensure each card snaps into place */
+    box-sizing: border-box;
+    overflow: hidden; /* Prevents overflow from affecting card layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced evenly inside the card */
 }
 
-/* Hover Effect */
-.video-card:hover {
-    transform: scale(1.05); /* Optional zoom effect on hover */
-}
-
-/* Video Card iframe (YouTube embed) */
 .video-card iframe {
     border-radius: 8px;
     width: 100%;
-    height: auto;
+    height: 180px; /* You can adjust the height to fit your desired aspect ratio */
+    margin-bottom: 15px; /* Adds space between the iframe and the text */
 }
 
-/* Video Card Titles */
 .video-card h3 {
     margin-top: 10px;
     color: #fff;
-    text-align: center;
-    white-space: normal; /* Allow wrapping of titles */
-    word-wrap: break-word; /* Prevent breaking words */
-    overflow-wrap: break-word; /* Ensures long words are broken correctly */
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+    margin-bottom: 10px; /* Adds space below the title */
 }
 
-/* Video Card Description */
 .video-card p {
     font-size: 0.9em;
     color: #ccc;
-    text-align: center;
-    white-space: normal;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+    flex-grow: 1; /* Ensures text doesn't overflow */
 }
 
-/* Show More Button */
-.show-more-btn {
-    background-color: #0f9;
-    color: #fff;
-    border: none;
-    padding: 15px 30px;
+/* CTA Section */
+.cta p {
     font-size: 1.2em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    color: #fff;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
 }
 
-.show-more-btn:hover {
-    background-color: #0c7e74;
+.cta a {
+    color: #0f9;
+    text-decoration: none;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .video-scroll-container {
-        flex-direction: column;
-        align-items: center;
-    }
+.cta a:hover {
+    text-decoration: underline;
+}
 
-    .video-card {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px; /* Space between videos */
-    }
+/* Latest Blog Posts Section */
+.latest-blog-posts {
+    padding: 50px 0;
+    background-color: #222;
+    text-align: center;
+}
+
+.latest-blog-posts h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.blog-card {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.blog-card h3 {
+    font-size: 1.8em;
+    color: #0f9;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+}
+
+.blog-card p {
+    font-size: 1.1em;
+    color: #ccc;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+}
+
+.blog-card a {
+    color: #0f9;
+    text-decoration: none;
+}
+
+.blog-card a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Section */
+.social-media {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #111;
+}
+
+.social-media h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Ensures words break when needed */
+    white-space: normal; /* Allows wrapping within the container */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    padding: 15px 30px;
+    background-color: #444;
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #0f9;
+}
+
+.social-icon.youtube {
+    background-color: #ff0000;
+}
+
+.social-icon.twitter {
+    background-color: #1da1f2;
+}
+
+.social-icon.instagram {
+    background-color: #e4405f;
 }
 
 /* Footer */
@@ -177,4 +261,43 @@ footer {
 
 footer p {
     color: #fff;
+}
+
+/* Button Styling */
+.show-more-btn {
+    background-color: #0f9;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+.video-card .show-more-btn {
+    margin-top: 10px;
+    color: #0f9;
+    text-decoration: none;
+    font-weight: bold;
+}
+.show-more-btn:hover {
+    background-color: #0c7d7d;
+}
+
+/* Mobile Optimization */
+
+/* For small screens */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.3em;
+    }
+
+    .video-scroll-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        gap: 10px;
+    }
 }
